@@ -1,0 +1,28 @@
+.music{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-height: 70px;
+  z-index: 100;
+  background-color: black;
+
+  .player-controls{
+    position: fixed;
+    cursor: pointer;
+    z-index: 2;
+    width: 100%;
+    bottom: 0;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: dimgrey;
+
+    .level{
+      height: 90px;
+      min-width: 768px;
+      padding: 0 20px;
+      background-color: dimgrey;
+      border-top: 1px solid;
+      background-image: url("../../assets/auth-bg.png");
+    }
+  }
+}
