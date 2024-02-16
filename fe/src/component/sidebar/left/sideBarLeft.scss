@@ -1,0 +1,37 @@
+.left {
+  display: flex;
+  flex-direction: column;
+
+  .logo {
+    width: 80%;
+    height: 70px;
+    padding: 0 25px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    word-break: break-word;
+
+    .img_logo {
+      width: 120px;
+      height: 40px;
+    }
+  }
+
+  .nav_menu {
+    display: flex;
+    flex-direction: column;
+
+    .nav_menu_items {
+      padding: 8px 25px;
+      color: #e7d6d6;
+      text-decoration: none;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
