@@ -1,0 +1,22 @@
+.sideRight_header{
+  display: flex;
+  height: 70px;
+  padding: 20px;
+  align-items: center;
+  color: #ffff;
+  font-size: 12px;
+  width: 289px;
+  justify-content: space-between;
+
+  .list1{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px;
+    border-radius: 20px;
+  }
+
+  .list2{
+    display: flex;
+    gap: 10px;
+  }
+}

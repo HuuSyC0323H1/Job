@@ -28,13 +28,6 @@ export const SideBarRight = () => {
                   </span>
                 </div>
             </div>
-
-            <div className="listSong">
-                <Scrollbars style={{width: "100%", height: "85vh"}}>
-
-                </Scrollbars>
-            </div>
-
             <div className="container">
                 <div className="sideRight_body">
 

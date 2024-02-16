@@ -1,10 +1,12 @@
-.wapper{
+.wapper {
   width: 100%;
-  min-height : 100vh;
+  min-height: 100vh;
   background-color: #170f23;
 
-  .content{
+  .content {
     width: 100%;
+    max-height: calc(100vh - 90px);
+    overflow: hidden;
     display: flex;
 
     .side_left {
@@ -13,7 +15,7 @@
       flex: none;
       background-color: #231b2e;
       position: fixed;
-      z-index: 10000;
+      z-index: 100;
     }
 
     .contents {
@@ -32,13 +34,13 @@
         align-items: center;
         justify-content: space-between;
         position: fixed;
-        z-index: 10000;
+        z-index: 100;
         background-color: #170f23;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
     }
 
-    .contents_hiden{
+    .contents_hiden {
       width: calc(100% - 240px);
       height: 100vh;
       flex: none;
@@ -47,35 +49,35 @@
       margin-right: 329px;
 
       .header_hiden {
-        width: calc(100% - 240px);
+        width: calc(100% - 320px);
         height: 70px;
         display: flex;
         padding: 0 59px;
         align-items: center;
         justify-content: space-between;
         position: fixed;
-        z-index: 10000;
+        z-index: 100;
         background-color: #170f23;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
     }
 
-    .side_right{
-      width : 329px;
-      height : calc(100vh - 90px);
-      display : flex;
+    .side_right {
+      width: 329px;
+      height: calc(100vh - 90px);
+      display: flex;
       position: fixed;
-      z-index: 10000;
+      z-index: 100;
       top: 0;
       right: 0;
     }
 
-    .sideRight_hidden{
-      width : 329px;
-      height : calc(100vh);
-      display : flex;
+    .sideRight_hidden {
+      width: 329px;
+      height: calc(100vh);
+      display: flex;
       position: absolute;
-      z-index: 10000;
+      z-index: 100;
       top: 0;
       right: 0;
       opacity: 0;
@@ -91,7 +93,7 @@
     flex: none;
     position: fixed;
     background-color: #130c1c;
-    z-index: 100000;
+    z-index: 100;
     bottom: 0;
   }
 }
