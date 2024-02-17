@@ -4,6 +4,7 @@ import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 import VolumeUpOutlinedIcon from '@mui/icons-material/VolumeUpOutlined';
 import QueueMusicOutlinedIcon from '@mui/icons-material/QueueMusicOutlined';
 import {Slider} from "@mui/material";
+import H5AudioPlayer from "react-h5-audio-player";
 
 export const Player = () => {
 
@@ -27,12 +28,22 @@ export const Player = () => {
             </div>
 
             <div className="main_control">
-                <div className="control">
+                {/*<div className="control">*/}
 
-                </div>
-                <div className="progress_bar">
-
-                </div>
+                {/*</div>*/}
+                {/*<div className="progress_bar">*/}
+                {/*     <span className="time_progress">*/}
+                {/*        00:00*/}
+                {/*     </span>*/}
+                {/*    <div className="track">*/}
+                {/*        <div className="run_time">*/}
+                {/*            <div className="run_time-dot"></div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*    <span className="time_progress">*/}
+                {/*        04:10*/}
+                {/*    </span>*/}
+                {/*</div>*/}
             </div>
 
             <div className="volume">

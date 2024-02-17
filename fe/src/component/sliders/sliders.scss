@@ -1,0 +1,116 @@
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+  padding: 20px;
+
+  .gallery {
+    padding-top: 32px;
+
+    .gallery-container {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      position: relative;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      margin: 0 -15px 20px;
+      transition: height .2s;
+
+      .gallery-item {
+        position: absolute;
+        height: auto;
+        transition: transform .5s ease-in-out, opacity .5s ease-in-out, z-index 0s linear .25s;
+        width: 33.33%;
+        z-index: 0;
+        //opacity: 0;
+        border-radius: 8px;
+        padding: 0 15px;
+
+        .zm-card {
+          max-width: 100%;
+          position: relative;
+
+          a {
+            cursor: pointer;
+            color: inherit;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+
+            .zm-card-image {
+              border-radius: 8px;
+              display: block;
+              position: relative;
+              overflow: hidden;
+
+              figure {
+                height: 0;
+                padding-bottom: 56.25%;
+                line-height: 0;
+                border-radius: 5px;
+                overflow: hidden;
+              }
+
+              img {
+                transition: transform .7s;
+                height: auto;
+                width: 100%;
+              }
+            }
+
+            .zm-card-content {
+              position: absolute;
+              bottom: 20px;
+              left: 20px;
+              right: 20px;
+              opacity: 0;
+              transition: opacity .5s ease-in-out;
+
+              .title{
+                font-size: 20px;
+                color: #ffffff;
+                font-weight: 700;
+                margin-bottom: 5px;
+                line-height: 1.36;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+
+              .subtitle{
+                font-size: 13px;
+                color: #ffffff;
+                line-height: 1.62;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        &.gallery-item-next {
+          transform: translateX(100%);
+        }
+
+        &.gallery-item-last {
+          transform: translateX(calc(-100%));
+        }
+
+        &.gallery-item-first {
+          transform: translateX(calc(100%));
+        }
+
+        &.gallery-item-previous {
+          transform: translateX(-100%);
+        }
+
+        &.gallery-item-selected {
+          transform: translateX(0);
+          opacity: 1;
+          z-index: 10;
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.search_zone {
+  display: flex;
+  position: relative;
+
+  .icon_search {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    color: #fff;
+    z-index: 100;
+  }
+
+  .ipt_search {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    background-color: hsla(0,0%,100%,0.1);
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0 40px;
+  }
+}

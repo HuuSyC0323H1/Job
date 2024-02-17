@@ -1,20 +1,17 @@
 import './search.scss';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 export const Search = () => {
 
-    return(
+    return (
         <>
-            <div className="serachs">
-                <div>
-                    <div className="search_all">
-                        <div className="search_header">
-                            <span style={{fontSize : '24px', fontWeight : 'bolder', paddingRight :'24px',borderRight :'4px solid #2F2739'}}>Kết quả tìm kiếm</span>
-                            <div className='list_search'>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className='search_zone'>
+                <span className='icon_search'>
+                    <SearchOutlinedIcon size={27}/>
+                </span>
+                <input type="text" className='ipt_search'
+                        placeholder='Tìm kiếm bài hát, nghệ sĩ, lời bài hát...'
+                />
             </div>
         </>
     )

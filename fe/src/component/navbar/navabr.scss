@@ -2,17 +2,19 @@
   width: 50%;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 0;
 
   .control {
-    width: 15%;
+    width: 8%;
     display: flex;
     gap: 24px;
     color: #fff;
   }
 
   .search {
-    width: 80%;
+    position: relative;
+    width: 100%;
+    max-width: 440px;
   }
 }
 

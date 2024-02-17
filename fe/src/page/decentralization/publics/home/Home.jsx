@@ -1,12 +1,13 @@
 import './home.scss';
 import {Link} from "react-router-dom";
+import {Sliders} from "../../../../component/sliders/Sliders.jsx";
 
 export const Home = () => {
 
     return (
         <div className="home_page">
-            <div>
-                {/*<Sliders/>*/}
+            <>
+                <Sliders/>
                 {/*<NewSong/>*/}
                 {/*<Sections data={""} number={5}/>*/}
                 {/*<Sections data={""} number={5}/>*/}
@@ -24,7 +25,7 @@ export const Home = () => {
                     </div>
                 </div>
                 <div style={{marginBottom: "90px"}}></div>
-            </div>
+            </>
         </div>
     );
 }
