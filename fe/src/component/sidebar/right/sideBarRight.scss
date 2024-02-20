@@ -1,22 +1,130 @@
 .sideRight_header{
   display: flex;
-  height: 70px;
   padding: 20px;
   align-items: center;
   color: #ffff;
   font-size: 12px;
-  width: 289px;
+  width: 320px;
   justify-content: space-between;
+
 
   .list1{
     display: flex;
-    background-color: rgba(255, 255, 255, 0.1);
     padding: 4px;
     border-radius: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1;
+    background-color: hsla(0,0%,100%,0.1);
+    margin-right: 10px;
+
+    .action{
+      padding: 5px 0;
+      cursor: pointer;
+      border-radius: 20px;
+      border: none;
+      flex-grow: 1;
+      background-color: transparent;
+
+      &.is_active{
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 15px;
+      }
+
+      h6{
+        font-weight: 400;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        color: white;
+      }
+    }
   }
 
   .list2{
     display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
     gap: 10px;
+
+    span{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 999px;
+      padding: 5px 7px;
+      cursor: pointer;
+      //color: #dadada;
+      background-color: hsla(0,0%,100%,0.1);
+    }
+
+    .disable{
+      pointer-events: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    .menu-settings{
+      top: 40px;
+      right: 0;
+      background-color: #34224f;
+      border-radius: 8px;
+      position: absolute;
+      box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+      width: 240px;
+      z-index: 101;
+
+      .menu-list{
+        padding: 10px 0;
+        list-style: none;
+        background-color: transparent;
+
+        button{
+          -ms-user-select: none;
+          user-select: none;
+          padding: 10px 15px;
+          font: inherit;
+          color: inherit;
+          background-color: transparent;
+          word-break: normal;
+          border: none;
+          cursor: pointer;
+        }
+
+        .zm-btn{
+          display: -moz-flex;
+          display: flex;
+          -moz-align-items: center;
+          -ms-align-items: center;
+          -o-align-items: center;
+          align-items: center;
+          -ms-flex-align: center;
+          width: 100%;
+          padding: 10px 20px 10px 14px;
+          font-size: 16px;
+          line-height: normal;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
+
+.containerr{
+  position: relative;
+  flex: 1 1;
+  .sideRight_body{
+
+  }
+
+  .sideBody2{
+    color: white;
   }
 }

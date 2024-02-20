@@ -4,9 +4,10 @@ import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 import VolumeUpOutlinedIcon from '@mui/icons-material/VolumeUpOutlined';
 import QueueMusicOutlinedIcon from '@mui/icons-material/QueueMusicOutlined';
 import {Slider} from "@mui/material";
-import H5AudioPlayer from "react-h5-audio-player";
 
-export const Player = () => {
+// eslint-disable-next-line react/prop-types
+export const Player = ({setIsShow}) => {
+
 
 
     return (
@@ -28,22 +29,7 @@ export const Player = () => {
             </div>
 
             <div className="main_control">
-                {/*<div className="control">*/}
 
-                {/*</div>*/}
-                {/*<div className="progress_bar">*/}
-                {/*     <span className="time_progress">*/}
-                {/*        00:00*/}
-                {/*     </span>*/}
-                {/*    <div className="track">*/}
-                {/*        <div className="run_time">*/}
-                {/*            <div className="run_time-dot"></div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*    <span className="time_progress">*/}
-                {/*        04:10*/}
-                {/*    </span>*/}
-                {/*</div>*/}
             </div>
 
             <div className="volume">
@@ -57,7 +43,7 @@ export const Player = () => {
                 </div>
 
                 <div className="btn_playlist">
-                    <div className="playlist_action">
+                    <div className="playlist_action" onClick={() => setIsShow(prev => !prev)}>
                         <QueueMusicOutlinedIcon size={23}/>
                     </div>
                 </div>

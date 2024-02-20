@@ -1,0 +1,195 @@
+.ranks {
+  width: 80%;
+  height: 280px;
+  margin: auto;
+  color: #fff;
+
+  .ranks_title {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .hover {
+
+      span {
+        color: hsla(0, 0%, 100%, 0.5);
+
+        svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+          font-size: 14px;
+        }
+
+        &:hover {
+          color: #8b45ca;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .zm-carousel-wrapper {
+    position: relative;
+
+    .zm-carousel {
+      padding: 3px 0 5px;
+      display: flex;
+      user-select: none;
+      overflow: hidden;
+      position: relative;
+      margin: 0 5px;
+
+      .zm-carousel__container {
+        display: flex;
+        z-index: 3;
+        width: 100%;
+        transition: transform 0.5s ease;
+
+        .zm-carousel_item {
+          width: 32%;
+          flex: 0 0 auto;
+          padding-right: 28px;
+          float: left;
+
+          .new-release-item {
+            display: flex;
+            padding: 5px;
+            border-radius: 4px;
+            background-color: hsla(0, 0%, 100%, 0.1);
+            color: #fff;
+            cursor: pointer;
+
+            .media {
+              align-items: center;
+              display: flex;
+              text-align: left;
+              padding: 10px;
+              border-radius: 5px;
+              -webkit-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+
+              .media-left {
+                margin-right: 10px;
+
+                .zm-card-image {
+                  display: block;
+                  position: relative;
+                  overflow: hidden;
+                  border-radius: 4px;
+
+                  figure {
+                    line-height: 0;
+                    height: 0;
+                    padding-bottom: 100%;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    width: 120px;
+                    background-color: hsla(0,0%,100%,0.1);
+                  }
+
+                  .opacity{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: var(--dark-alpha-50);
+                    visibility: hidden;
+                  }
+
+                  .zm-actions-container {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+
+                    &.zm-actions{
+                      position: absolute;
+                      left: 50%;
+                      top: 50%;
+                      bottom: auto;
+                      right: auto;
+                      transform: translateX(-50%) translateY(-50%);
+                      display: -moz-flex;
+                      display: flex;
+                      -moz-justify-content: space-around;
+                      -ms-justify-content: space-around;
+                      -o-justify-content: space-around;
+                      justify-content: space-around;
+                      -ms-flex-pack: distribute;
+                      -moz-align-items: center;
+                      -ms-align-items: center;
+                      -o-align-items: center;
+                      align-items: center;
+                      -ms-flex-align: center;
+                      visibility: hidden;
+                      width: 80%;
+                      z-index: 97;
+
+                      .is-hidden{
+                        visibility: hidden;
+                        opacity: 0;
+                        -webkit-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        pointer-events: none;
+
+                        .zm-btn{
+                          font-size: 14px;
+                          border-radius: 999px;
+                          line-height: normal;
+                          border: 0;
+                          display: inline-block;
+                          font-weight: 400;
+                          text-transform: none;
+                          text-align: center;
+                          cursor: pointer;
+                          position: relative;
+
+
+                        }
+                      }
+                    }
+
+                    &.playlist-action{
+                      width: 100%;
+                      justify-content: space-evenly;
+                    }
+                  }
+                }
+              }
+
+              .media-content{
+                position: relative;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-basis: auto;
+                flex-grow: 1;
+                flex-shrink: 1;
+                text-align: left;
+                align-self: center;
+              }
+
+              .media-left, .media-right {
+                flex-basis: auto;
+                flex-grow: 0;
+                flex-shrink: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.new-release-slider .new-release-item .media, .new-release-slider .new-release-item a {
+  width: 100%
+}
+
+button{
+  -ms-user-select: none;
+  user-select: none;
+}

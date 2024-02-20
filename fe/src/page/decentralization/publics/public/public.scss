@@ -5,8 +5,6 @@
 
   .content {
     width: 100%;
-    max-height: calc(100vh - 90px);
-    overflow: hidden;
     display: flex;
 
     .side_left {
@@ -16,18 +14,31 @@
       background-color: #231b2e;
       position: fixed;
       z-index: 100;
+      transition: height .5s ease;
+    }
+
+    .side_left_hidden {
+      width: 240px;
+      height: 100vh;
+      flex: none;
+      background-color: #231b2e;
+      position: fixed;
+      z-index: 100;
+      transition: height .5s ease-out;
     }
 
     .contents {
-      width: calc(100% - 240px - 329px);
+      width: calc(100% - 240px - 360px);
       min-height: calc(100vh - 90px);
       flex: none;
       position: relative;
       margin-left: 240px;
-      margin-right: 329px;
+      margin-right: 360px;
+      overflow: hidden;
+      transition: width .6s;
 
       .header {
-        width: calc(100% - 240px - 329px);
+        width: calc(100% - 240px - 450px);
         height: 70px;
         display: flex;
         padding: 0 59px;
@@ -42,48 +53,67 @@
 
     .contents_hiden {
       width: calc(100% - 240px);
-      height: 100vh;
+      min-height: 100vh;
       flex: none;
       position: relative;
       margin-left: 240px;
       margin-right: 329px;
+      transition: width .6s;
 
       .header_hiden {
-        width: calc(100% - 320px);
-        height: 70px;
         display: flex;
-        padding: 0 59px;
         align-items: center;
         justify-content: space-between;
         position: fixed;
-        z-index: 100;
+        left: 240px;
+        top: 0;
+        right: 0;
+        height: 70px;
+        padding: 0 70px;
+        z-index: 99;
         background-color: #170f23;
+        width: calc(100% - 380px);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: width .6s;
       }
     }
 
     .side_right {
-      width: 329px;
+      width: 360px;
       height: calc(100vh - 90px);
+      display: flex;
+      position: fixed;
+      z-index: 100;
+      bottom: 90px;
+      right: 0;
+      border-left: 1px solid hsla(0,0%,100%,0.1);;
+      background-color: #170f23;
+      transition: width 0.3s ease-in-out;
+
+    }
+
+    .side_right_hidden {
+      width: 360px;
+      height: 100vh;
       display: flex;
       position: fixed;
       z-index: 100;
       top: 0;
       right: 0;
+      border-left: 1px solid hsla(0,0%,100%,0.1);;
+      background-color: #170f23;
+      //transition: width .3s ease-in-out;
     }
 
     .sideRight_hidden {
-      width: 329px;
+      width: 360px;
       height: calc(100vh);
       display: flex;
       position: absolute;
       z-index: 100;
-      top: 0;
+      bottom: 100px;
       right: 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.9s ease-out;
-      animation: slideInFromLeft 0.5s ease;
+      transition: width 0.3s, height 0.3s, bottom 0.3s, right 0.3s;
     }
   }
 
@@ -95,5 +125,10 @@
     background-color: #130c1c;
     z-index: 100;
     bottom: 0;
+    transition: bottom 0.5s ease;
+
+    &.hidden{
+      bottom: -90px;
+    }
   }
 }
