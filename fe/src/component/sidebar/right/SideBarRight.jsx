@@ -5,33 +5,55 @@ import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import Scrollbars from "react-custom-scrollbars-2";
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 // eslint-disable-next-line react/prop-types
 export const SideBarRight = ({setOffPlay}) => {
 
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [disable, setDisable] = useState(true);
+    const [isActive, setIsActive] = useState(false);
+    const popupRef = useRef(null);
 
     const handleMoreIconClick = () => {
         setIsPopupOpen(!isPopupOpen);
     };
 
+    const  handleDeletePopUp = () => {
+        setOffPlay(prevOffPlay => !prevOffPlay);
+        setDisable(false);
+        setIsPopupOpen(false);
+    }
+
+    const handleButtonClick = () => {
+        setIsActive(!isActive);
+    };
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (popupRef.current && !popupRef.current.contains(event.target)) {
+                setIsPopupOpen(false);
+            }
+        };
+
+        document.addEventListener("click", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("click", handleClickOutside);
+        };
+    }, []);
+
     return (
         <div>
             <div className="sideRight_header">
                 <div className="list1">
-                    <button
-                        className="action is_active"
-                    >
+                    <button className={`action ${isActive ? "is_active" : ""}`} onClick={handleButtonClick}>
                         <h6 className="has-text-white queue-list-title">Danh sách phát</h6>
                     </button>
-                    <button
-                        className="action"
-                    >
+                    <button className={`action ${isActive ? "" : "is_active"}`} onClick={handleButtonClick}>
                         <h6 className="has-text-white">Nghe gần đây</h6></button>
                 </div>
-                <div className="list2">
+                <div className="list2" ref={popupRef}>
                     {!disable ? (
                         <>
                             <span className="disable"><AccessAlarmIcon size={18}/></span>
@@ -44,11 +66,11 @@ export const SideBarRight = ({setOffPlay}) => {
                         </>
                     )}
                     {isPopupOpen && (
-                        <div className="menu menu-settings right">
+                        <div className="menu menu-settings right" >
                             <ul className="menu-list">
                             <li>
                                     <button className="zm-btn button" tabIndex="0"
-                                            onClick={() => {setOffPlay(prevOffPlay => !prevOffPlay);setDisable(false);}}>
+                                            onClick={handleDeletePopUp}>
                                         <DeleteOutlineOutlinedIcon/>
                                         <a>Xóa danh sách phát</a>
                                     </button>
