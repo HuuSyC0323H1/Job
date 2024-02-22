@@ -4,6 +4,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Scrollbars from "react-custom-scrollbars-2";
 import {useEffect, useRef, useState} from "react";
 
@@ -112,7 +113,14 @@ export const SideBarRight = ({setOffPlay}) => {
                 </div>
             ):(
                 <>
-                    <h1 style={{color:"white"}}>abc</h1>
+                    <div className="empty-img"></div>
+                    <div className="empty-queue">
+                        <div className="content">Khám phá thêm các bài hát mới của Zing MP3</div>
+                        <button className="zm-btn is-outlined active button" tabIndex="0">
+                           <PlayArrowIcon style={{marginRight:"10px"}}/>
+                            <span>Phát nhạc mới phát hành</span>
+                        </button>
+                    </div>
                 </>
             )}
         </div>

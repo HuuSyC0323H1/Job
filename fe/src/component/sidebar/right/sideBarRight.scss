@@ -128,3 +128,52 @@
     color: white;
   }
 }
+
+.empty-img{
+  width: 285px;
+  height: 240px;
+  margin: 20px 0 0 20px;
+  background: url(https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/bg-empty-dark.svg) 50%/cover no-repeat;
+  opacity: .5;
+}
+
+.empty-queue{
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  z-index: 98;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 0 33px;
+
+  .content{
+    font-size: 14px;
+    line-height: 1.58;
+    margin: 6px 0 20px;
+    color: #ffffff;
+  }
+
+  .zm-btn{
+    font-size: 14px;
+    padding: 7px 26px;
+    align-items: center;
+
+    &.is-outlined{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 400;
+      background-color: hsla(0,0%,100%,0.1);
+      border: 1px solid hsla(0,0%,100%,0.1);
+      color: #ffffff;
+      margin: 0 auto;
+
+      &.active{
+        background-color: #9b4de0;
+        border-color: #9b4de0;
+        color: #ffffff;
+        margin-right: 20px;
+      }
+    }
+  }
+}
